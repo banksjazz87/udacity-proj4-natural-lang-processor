@@ -8,4 +8,9 @@ import './styles/main.scss'
 testing;
 anotherTest();
 
-console.log('batman smells like poop and pickles');
+console.log('batman smells like poop and poop');
+
+export {
+    testing,
+    anotherTest
+}
