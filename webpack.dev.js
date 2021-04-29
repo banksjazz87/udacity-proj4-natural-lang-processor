@@ -3,7 +3,12 @@ const webpack = require("webpack");
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    mode: 'development',
+    devtool: 'source-map',
     entry: './src/client/index.js',
+    devServer: {
+        port: 8090
+    },
     module: {
         rules: [{
             test: /\.js$/,
