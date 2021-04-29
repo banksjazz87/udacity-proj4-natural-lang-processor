@@ -2,6 +2,6 @@ import { testing } from "./js/api.request.js"
 import { anotherTest } from "./js/post.request.js"
 
 testing;
-anotherTest;
+anotherTest();
 
 console.log('batman');

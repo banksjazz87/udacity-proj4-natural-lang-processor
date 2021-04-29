@@ -11,9 +11,11 @@ const port = 3090;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.use(express.static('dist'));
+
 //setting up the server
 app.get('/', (req, res) => {
-    res.send('hello world');
+    res.sendFile('dist/index.html');
     console.log(`Server is running on port ${port}`);
 });
 
