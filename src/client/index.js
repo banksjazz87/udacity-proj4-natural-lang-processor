@@ -5,10 +5,10 @@ import './styles/form.scss'
 import './styles/header.scss'
 import './styles/main.scss'
 
-testing;
+/*testing;
 anotherTest();
 
-console.log('batman smells like poop and poop');
+console.log('batman smells like poop and poop');*/
 
 
 export {
