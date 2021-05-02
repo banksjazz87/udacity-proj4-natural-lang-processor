@@ -1,5 +1,7 @@
 const anotherTest = () => {
-    alert("sup yo yo!?");
+    console.log("sup yo yo!?");
+    MyLibrary.apiCall('/callData');
+
 }
 
 export { anotherTest }

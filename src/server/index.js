@@ -22,6 +22,12 @@ app.get('/', (req, res) => {
 app.listen(port);
 
 
+app.get('/callData', testSend);
+
+function testSend(req, res) {
+    res.send('sup pops?');
+}
+
 
 //This contains the url (id) and the application key (key) for the meaning cloud api.
 const textapi = {
