@@ -27,7 +27,8 @@ app.listen(port);
 app.get('/callData', testSend);
 
 function testSend(req, res) {
-    res.send('hello');
+    res.send(textapi);
+
 }
 
 
