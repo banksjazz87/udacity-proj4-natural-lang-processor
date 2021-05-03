@@ -1,7 +1,8 @@
-async function apiCall(apiData) {
-    const response = await fetch(apiData);
+const apiCall = async() => {
+    const response = await fetch('/callData');
     try {
-        console.log(response);
+        const data = await response.json();
+        console.log(data);
     } catch (error) {
         console.log('error', error)
     }
