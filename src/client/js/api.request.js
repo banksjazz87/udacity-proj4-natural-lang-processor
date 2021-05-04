@@ -21,6 +21,8 @@ const apiCall = async() => {
             }))
             .then(({ status, body }) => console.log(status, body))
 
+        .catch(error => console.log('error', error))
+
     } catch (error) {
         console.log('error', error)
     }
