@@ -1,6 +1,5 @@
-const anotherTest = () => {
-    console.log("sup yo yo!?");
-    MyLibrary.apiCall('/callData');
+const anotherTest = (value) => {
+    console.log("sup yo yo!?" + value);
 
 }
 

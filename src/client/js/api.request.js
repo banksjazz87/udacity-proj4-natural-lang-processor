@@ -15,13 +15,27 @@ const apiCall = async() => {
         }
 
         const mainResponse = await fetch(data.application_id, requestOptions)
-            .then(mainResponse => ({
+
+
+        /////// new attempt
+        try {
+            const newData = {
+                status: mainResponse.status,
+                body: await mainResponse.json()
+
+            }
+
+            console.log(newData.status, newData.body)
+        } catch (error) {
+            console.log('error', error)
+        }
+        /* .then(mainResponse => ({
                 status: mainResponse.status,
                 body: mainResponse.json()
             }))
             .then(({ status, body }) => console.log(status, body))
 
-        .catch(error => console.log('error', error))
+        .catch(error => console.log('error', error))*/
 
     } catch (error) {
         console.log('error', error)
