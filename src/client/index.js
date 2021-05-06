@@ -1,4 +1,5 @@
 import { apiCall } from "./js/api.request.js"
+import { outPut } from "./js/post.request"
 import { postRequest } from "./js/post.request.js"
 import './styles/footer.scss'
 import './styles/form.scss'
@@ -8,5 +9,6 @@ import './styles/main.scss'
 
 export {
     apiCall,
-    postRequest
+    postRequest,
+    outPut
 }
