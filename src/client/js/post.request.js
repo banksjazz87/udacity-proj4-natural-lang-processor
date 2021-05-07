@@ -44,23 +44,28 @@ let displayedData = {
 const outPut = () => {
     let displayedLength = (Object.keys(displayedData).length);
 
+    const listMaster = document.createElement('ul');
+    listMaster.textContent = "Sentiment Analysis Results"
+    const att = document.createAttribute('id');
+    att.value = "list";
+    listMaster.setAttributeNode(att);
+
+    document.getElementById('output_container').appendChild(listMaster);
+
+
     //let header = document.createElement('ul');
     //let liItem = document.createElement('li');
-
     for (let i = 0; i < displayedLength; i++) {
 
-        let header = document.createElement('ul');
-        header.textContent = Object.keys(displayedData)[i];
-
-        let newAtt = document.createAttribute('id');
-        newAtt.value = Object.keys(displayedData)[i];
-        header.setAttributeNode(newAtt);
 
         let liItem = document.createElement('li');
-        liItem.textContent = Object.values(displayedData)[i];
-        document.getElementById(header)[i].appendChild(liItem)[i];
+        liItem.textContent = Object.keys(displayedData)[i] + ':' + ' ' + Object.values(displayedData)[i];
 
-        document.getElementById('output_container').appendChild(header)[i];
+        setTimeout(() => { document.getElementById('list').appendChild(liItem)[i] }, 2000);
+
     }
 }
-export { postRequest, outPut }
+
+const clearInput = () => document.getElementById('input_box').value = "";
+
+export { postRequest, outPut, clearInput }
