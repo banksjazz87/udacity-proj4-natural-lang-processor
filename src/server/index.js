@@ -23,14 +23,11 @@ app.get('/', (req, res) => {
 
 app.listen(port);
 
+app.get('/callData', sendApi);
 
-app.get('/callData', testSend);
-
-function testSend(req, res) {
+function sendApi(req, res) {
     res.send(textapi);
-
 }
-
 
 //This contains the url (id) and the application key (key) for the meaning cloud api.
 const textapi = {
