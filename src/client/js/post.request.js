@@ -85,7 +85,7 @@ const outPut = () => {
         let displayedLength = (Object.keys(displayedData).length);
 
         const listMaster = document.createElement('ul');
-        listMaster.textContent = "Results"
+        //listMaster.textContent = "Results"
         const att = document.createAttribute('id');
         att.value = "list";
         listMaster.setAttributeNode(att);
