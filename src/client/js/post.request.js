@@ -101,6 +101,7 @@ const outPut = () => {
 
         }
         initValue = true;
+        display();
     } else {
         const allLiItems = document.querySelectorAll('li');
 
@@ -123,5 +124,13 @@ currentInput.addEventListener('click', () => {
         currentInput.value = "";
     }
 })
+
+const display = () => {
+    let currentDisplay = document.getElementById('output_container');
+
+    if (currentDisplay.style.display === 'none') {
+        currentDisplay.style.display = 'flex';
+    }
+}
 
 export { postRequest, outPut }
