@@ -1,3 +1,9 @@
+/**
+ * @description this is an async function that creates a post request, as instructed by the meaning cloud api, and then sets the value of the displayed data object and the httpCode variable. 
+ * @param {*} url this is the input value that is provided by the user.
+ * @param {*} key this is a hidden value.
+ * @returns new values for the displayed data object, and also provides the value for the httpCode variable.
+ */
 const postRequest = async(url, key) => {
     const formdata = new FormData();
     formdata.append("key", key);
@@ -36,7 +42,8 @@ const postRequest = async(url, key) => {
     }
 }
 
-//Object that will contain the values that we want to have displayed after the fetch requests have been made.
+
+//Object that will contain the values that will be displayed after the fetch requests have been made.
 let displayedData = {
     Agreement: "",
     Confidence: "",
@@ -45,17 +52,29 @@ let displayedData = {
     Score: ""
 }
 
+//variable to hold the current http status.
 let httpCode = "";
+
+//boolean to determine if the displayedData object has any current values.
 let initValue = false;
+
+//variable to hold the result of the regTest function.
 let regTestResult = "";
 
-
+/**
+ * @description takes a string and runs a regEx test to determine if it's a URL.
+ * @param {*} string 
+ * @returns a boolean to determine if the passed parameter is a valid URL or not.
+ */
 const regTest = (string) => {
     regTestResult = ((/^https?:\/\/\S{4,}$/).test(string));
 }
 
-//This function is a string of conditional statements that looks at whether the user has; inserted an invalid URL, inserted a valid and initial URL request, or if the user has inserted a valied URL with data already being displayed on the page.
 
+/**
+ * @description This function is a string of conditional statements that looks at whether the user has; inserted an invalid URL, inserted a valid and initial URL request, or if the user has inserted a valied URL with data already being displayed on the page.
+ * @returns an updated UI displaying the results of the URL that was submitted.
+ */
 const outPut = () => {
     //console.log(typeof(regTest(document.getElementById('input_box').value)));
     regTest(document.getElementById('input_box').value)
@@ -91,8 +110,10 @@ const outPut = () => {
     }
 }
 
-//This is a function to clear the current input value if there is currently a value there.
-
+/**
+ * @description this is an event listener applied to the input field.
+ * @returns if there as data in the input field, the field will automatically delete everything if the user clicks on it again.
+ */
 const currentInput = document.getElementById('input_box');
 
 currentInput.addEventListener('click', () => {
