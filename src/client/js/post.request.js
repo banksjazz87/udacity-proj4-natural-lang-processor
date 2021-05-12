@@ -79,7 +79,7 @@ const outPut = () => {
     //console.log(typeof(regTest(document.getElementById('input_box').value)));
     regTest(document.getElementById('input_box').value)
         //if (httpCode === "212") {
-    if (regTestResult === false && httpCode === "212") {
+    if (regTestResult === false && httpCode === "212" || !document.getElementById('input_box').value) {
         alert('Please insert a correct URL address');
     } else if (initValue === false) {
         let displayedLength = (Object.keys(displayedData).length);
