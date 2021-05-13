@@ -1,14 +1,17 @@
+$headColor: #2d3142;
 header {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: aqua;
-    padding-top: 0;
-    padding-bottom: 0;
-    height: 10vh;
-    h1 {
-        text-align: center;
-        font-size: 2.25em;
-    }
+    background-color: $headColor;
+    padding-top: .15em;
+    padding-bottom: .15em;
+    /*height: 10vh;*/
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.25em;
+    color: white;
 }

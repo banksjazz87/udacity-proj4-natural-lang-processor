@@ -1,9 +1,13 @@
+    $buttonColor: #ef8354;
+    $buttonHoverColor: #bfc0c0;
+    $outPutColor: #ef8354;
     form {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 15vh;
         #input_box {
+            margin-top: 5vh;
             width: 30vw;
             font-size: .9em;
         }
@@ -18,8 +22,10 @@
             font-size: .9em;
             border-radius: 5%;
             box-shadow: 1px 2px black;
+            background-color: $buttonColor;
+            color: white;
             &:hover {
-                background-color: orange;
+                background-color: $buttonHoverColor;
                 box-shadow: 2px 4px black;
             }
         }
@@ -28,15 +34,16 @@
     #output_container {
         display: flex;
         flex-direction: column;
-        margin-top: 2em;
+        margin-top: 10vh;
         margin-left: auto;
         margin-right: auto;
         align-items: center;
-        background-color: red;
+        background-color: $outPutColor;
         color: white;
         padding: 1em;
         width: 25vw;
         box-shadow: 1px 3px black;
+        border-radius: 5%;
         h2 {
             margin-top: .15em;
             margin-bottom: .15em;
