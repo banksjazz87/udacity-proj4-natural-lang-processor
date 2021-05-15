@@ -1,0 +1,1 @@
+import { output } from "../src/client/js/post.reques.js";
