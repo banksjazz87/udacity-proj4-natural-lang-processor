@@ -15,7 +15,7 @@
         <h1>Sentiment Analysis</h1>
     </header>
     <form>
-        <input id="input_box" type="text" placeholder="Insert valid URL here" />
+        <input id="input_box" type="text" placeholder="Insert valid URL here" onclick="return MyLibrary.inputListener()" />
         <input id="submit_button" type="button" value="Submit" onclick="return MyLibrary.apiCall()" />
     </form>
     <div id="output_container" style="display: none">

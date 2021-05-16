@@ -115,15 +115,19 @@ const outPut = () => {
  * @description this is an event listener applied to the input field.
  * @returns if there as data in the input field, the field will automatically delete everything if the user clicks on it again.
  */
-const currentInput = document.getElementById('input_box');
 
-currentInput.addEventListener('click', () => {
-    if (currentInput.placeholder) {
-        currentInput.placeholder = "";
-    } else {
-        currentInput.value = "";
-    }
-})
+function inputListener() {
+    const currentInput = document.getElementById('input_box');
+
+    currentInput.addEventListener('click', () => {
+        if (currentInput.placeholder) {
+            currentInput.placeholder = "";
+        } else {
+            currentInput.value = "";
+        }
+    })
+}
+
 
 const display = () => {
     let currentDisplay = document.getElementById('output_container');
@@ -133,4 +137,4 @@ const display = () => {
     }
 }
 
-export { postRequest, outPut }
+export { postRequest, outPut, inputListener }
