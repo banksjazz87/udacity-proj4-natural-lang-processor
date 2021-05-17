@@ -1,9 +1,10 @@
-/*import { apiCall } from "../src/client/js/api.request.js";
+import { apiCall } from "../src/client/js/api.request.js";
+import { MyLibrary } from "../dist/main.js";
+import { enableFetchMocks } from 'jest-fetch-mock';
+
+enableFetchMocks();
+MyLibrary;
 
 test("Testing the functionality of the apiCall function", () => {
-    expect(apiCall().toBeDefined());
-})*/
-
-test("Six plus two equals eight", () => {
-    expect(6 + 2).toBe(9);
+    expect(apiCall()).toBeDefined();
 })

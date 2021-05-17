@@ -1,8 +1,8 @@
-/*import { postRequest } from "../src/client/js/post.request.js";
+import { postRequest } from "../src/client/js/post.request.js";
+import { enableFetchMocks } from 'jest-fetch-mock'
+
+enableFetchMocks();
 
 test("Testing the postRequest() function", () => {
-    expect(postRequest().toBeDefined());
-})*/
-test("two plus to two is four", () => {
-    expect(2 + 2).toBe(4);
-});
+    expect(postRequest()).toBeDefined();
+})
