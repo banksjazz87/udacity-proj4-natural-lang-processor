@@ -34,9 +34,11 @@ const postRequest = async(url, key) => {
         }
 
         httpCode = newData.body.status.code;
-        console.log(displayedData)
+        console.log("httpCode = " + httpCode)
+        return httpCode;
+        /*console.log(displayedData)
         console.log(newData.status, newData.body)
-        console.log(newData.body.status.code)
+        console.log(newData.body.status.code)*/
     } catch (error) {
         console.log('error', error)
     }
@@ -68,6 +70,7 @@ let regTestResult = "";
  */
 const regTest = (string) => {
     regTestResult = ((/^https?:\/\/\S{4,}$/).test(string));
+    return regTestResult;
 }
 
 
@@ -137,4 +140,4 @@ const display = () => {
     }
 }
 
-export { postRequest, outPut, inputListener }
+export { postRequest, outPut, inputListener, regTest }

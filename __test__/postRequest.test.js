@@ -3,6 +3,6 @@ import { enableFetchMocks } from 'jest-fetch-mock'
 
 enableFetchMocks();
 
-test("Testing the postRequest() function", () => {
+test("Testing to make sure that the postRequest function is defined", () => {
     expect(postRequest()).toBeDefined();
 })
