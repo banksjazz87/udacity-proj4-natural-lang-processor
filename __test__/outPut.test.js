@@ -7,9 +7,12 @@ test("Testing the output function", () => {
 
     const inputVal = document.getElementById('input_box');
 
-    if (inputVal === "") {
-        expect(outPut()).toBeUndefined();
-    } else if ((/^https?:\/\/\S{4,}$/).test(inputVal)) {
-        expect(outPut()).toBe('<li><li>')
+    const positiveInput = "<li></li>"
+    const errorMessage = alert('Please insert a correct URL address, and make sure the URL starts with "http://" or "https://"');
+
+    if ((/^https?:\/\/\S{4,}$/).test(inputVal)) {
+        expect(outPut()).toBe(positiveInput)
+    } else {
+        expect(outPut()).toBe(errorMessage);
     }
 })

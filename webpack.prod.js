@@ -10,12 +10,12 @@ module.exports = {
         library: {
             name: 'MyLibrary',
             type: 'var'
-        }
+        },
     },
     module: {
         rules: [{
                 test: /\.js$/,
-                exclude: /node_modules/,
+                exclude: [/node_modules/, /__test__/],
                 loader: "babel-loader"
             },
             {
@@ -30,5 +30,22 @@ module.exports = {
             filename: './index.html'
         }),
 
-    ]
+    ],
+    resolve: {
+        fallback: {
+            /* "stream": require.resolve('stream-browserify'),
+             "path": require.resolve("path-browserify"),
+             "http": require.resolve("stream-http")*/
+            "fs": false,
+            "tls": false,
+            "net": false,
+            "path": false,
+            "zlib": false,
+            "http": false,
+            "https": false,
+            "stream": false,
+            "crypto": false,
+            "crypto-browserify": false
+        }
+    }
 }
