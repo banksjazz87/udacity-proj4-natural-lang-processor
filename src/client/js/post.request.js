@@ -36,7 +36,6 @@ const postRequest = async(url, key) => {
         }
 
         httpCode = newData.body.status.code;
-        console.log(httpCode);
         return httpCode;
 
     } catch (error) {
