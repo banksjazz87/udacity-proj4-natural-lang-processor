@@ -4,6 +4,7 @@
  * @param {*} key this is a hidden value.
  * @returns new values for the displayed data object, and also provides the value for the httpCode variable.
  */
+
 const postRequest = async(url, key) => {
     const formdata = new FormData();
     formdata.append("key", key);
@@ -19,10 +20,11 @@ const postRequest = async(url, key) => {
     const mainResponse = await fetch(url, requestOptions);
 
     try {
+        const newRes = await mainResponse.json();
 
         const newData = {
-            status: mainResponse.status,
-            body: await mainResponse.json()
+            status: newRes.status,
+            body: newRes
         }
         displayedData = {
             Agreement: newData.body.agreement,
@@ -34,11 +36,9 @@ const postRequest = async(url, key) => {
         }
 
         httpCode = newData.body.status.code;
-        console.log("httpCode = " + httpCode)
+        console.log(httpCode);
         return httpCode;
-        /*console.log(displayedData)
-        console.log(newData.status, newData.body)
-        console.log(newData.body.status.code)*/
+
     } catch (error) {
         console.log('error', error)
     }
@@ -73,11 +73,11 @@ const regTest = (string) => {
     return regTestResult;
 }
 
-
 /**
  * @description This function is a string of conditional statements that looks at whether the user has; inserted an invalid URL, inserted a valid and initial URL request, or if the user has inserted a valied URL with data already being displayed on the page.
  * @returns an updated UI displaying the results of the URL that was submitted.
  */
+
 const outPut = () => {
     //console.log(typeof(regTest(document.getElementById('input_box').value)));
     regTest(document.getElementById('input_box').value)
@@ -131,7 +131,6 @@ function inputListener() {
     })
 }
 
-
 const display = () => {
     let currentDisplay = document.getElementById('output_container');
 
@@ -140,4 +139,4 @@ const display = () => {
     }
 }
 
-export { postRequest, outPut, inputListener, regTest }
+export { postRequest, outPut, regTest, inputListener }
