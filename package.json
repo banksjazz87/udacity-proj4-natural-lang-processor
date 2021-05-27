@@ -6,7 +6,8 @@
     "scripts": {
         "test": "jest",
         "build-prod": "webpack --config webpack.prod.js",
-        "build-dev": "webpack serve  --config webpack.dev.js --open"
+        "build-dev": "webpack serve  --config webpack.dev.js --open",
+        "start": "node src/server/index.js"
     },
     "author": "Chris Banks",
     "license": "ISC",
