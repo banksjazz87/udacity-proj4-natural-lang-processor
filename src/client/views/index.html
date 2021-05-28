@@ -27,4 +27,14 @@
     <script src="../../../dist/main.js" async defer></script>
 </body>
 
+<script>
+    //The following is the code used to create a service worker.
+
+    if ('servicWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js')
+        })
+    }
+</script>
+
 </html>

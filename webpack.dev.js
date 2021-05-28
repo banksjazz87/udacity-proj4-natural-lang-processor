@@ -3,8 +3,6 @@ const webpack = require("webpack");
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-
-
 module.exports = {
     mode: 'development',
     devtool: 'source-map',
@@ -41,7 +39,8 @@ module.exports = {
             verbose: true,
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
-        }),
+        })
+
     ],
     resolve: {
         fallback: {
