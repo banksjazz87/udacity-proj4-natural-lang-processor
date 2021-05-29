@@ -11,7 +11,7 @@ module.exports = {
         library: {
             name: 'MyLibrary',
             type: 'var'
-        },
+        }
     },
     module: {
         rules: [{
