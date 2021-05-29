@@ -66,9 +66,6 @@ Polarity of the element it refers to: global polarity,
 - Once all of the dependencies are installed, run the command line:
     >npm run build-prod
 
-- A dist folder will appear in the list of files, once this happens run the command line: 
-    >npm run start
-
 - Open your browser and go to 
     >localhost:3080
 
