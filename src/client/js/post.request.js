@@ -43,7 +43,6 @@ const postRequest = async(url, key) => {
     }
 }
 
-
 //Object that will contain the values that will be displayed after the fetch requests have been made.
 let displayedData = {
     Agreement: "",
@@ -78,16 +77,15 @@ const regTest = (string) => {
  */
 
 const outPut = () => {
-    //console.log(typeof(regTest(document.getElementById('input_box').value)));
+
     regTest(document.getElementById('input_box').value)
-        //if (httpCode === "212") {
+
     if (regTestResult === false && httpCode === "212" || !document.getElementById('input_box').value) {
         alert('Please insert a correct URL address, and make sure the URL starts with "http://" or "https://"');
     } else if (initValue === false) {
         let displayedLength = (Object.keys(displayedData).length);
 
         const listMaster = document.createElement('ul');
-        //listMaster.textContent = "Results"
         const att = document.createAttribute('id');
         att.value = "list";
         listMaster.setAttributeNode(att);
@@ -102,8 +100,10 @@ const outPut = () => {
             document.getElementById('list').appendChild(liItem)[i];
 
         }
+
         initValue = true;
         display();
+
     } else {
         const allLiItems = document.querySelectorAll('li');
 

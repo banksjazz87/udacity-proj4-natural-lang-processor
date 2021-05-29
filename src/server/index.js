@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
 
 app.listen(port);
 
+//When a get request is made for callData, it sends back the encrypted api information for meaning cloud.
 app.get('/callData', sendApi);
 
 function sendApi(req, res) {

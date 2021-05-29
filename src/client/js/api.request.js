@@ -3,7 +3,6 @@
  * @returns a series of different promises that ulitmately, if successful, renders new information to the UI.
  */
 
-
 const apiCall = async() => {
     fetch('http://localhost:3090/callData')
         .then(response => response.json())
@@ -11,7 +10,5 @@ const apiCall = async() => {
         .then(() => MyLibrary.outPut())
         .catch(error => console.log('error', error))
 }
-
-
 
 export { apiCall }

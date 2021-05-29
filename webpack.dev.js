@@ -44,9 +44,6 @@ module.exports = {
     ],
     resolve: {
         fallback: {
-            /*"stream": require.resolve('stream-browserify'),
-            "path": require.resolve("path-browserify"),
-            "http": require.resolve("stream-http")*/
             "fs": false,
             "tls": false,
             "net": false,
@@ -57,7 +54,6 @@ module.exports = {
             "stream": false,
             "crypto": false,
             "crypto-browserify": false
-
         }
     }
 }
