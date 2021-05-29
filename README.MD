@@ -66,8 +66,11 @@ Polarity of the element it refers to: global polarity,
 - Once all of the dependencies are installed, run the command line:
     >npm run build-prod
 
+- Start the server by running the command line: 
+    >npm run start
+    
 - Open your browser and go to 
-    >localhost:3080
+    >localhost:3090
 
 - Try out the application by supplying the input field with a valid url.
 
